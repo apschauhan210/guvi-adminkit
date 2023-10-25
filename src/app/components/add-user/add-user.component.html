@@ -1,0 +1,50 @@
+<main class="d-flex w-100">
+    <div class="container d-flex flex-column">
+        <div class="row">
+            <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto d-table h-100">
+                <div class="d-table-cell align-middle">
+
+                    <div class="text-center mt-4">
+                        <h1 class="h2">Get started</h1>
+                        <p class="lead">
+                            Start creating the best possible user experience for you customers.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="m-sm-3">
+                                <form [formGroup]="userDetails" (ngSubmit)="onSubmit()">
+                                    <div class="mb-3">
+                                        <label class="form-label">Full name</label>
+                                        <input id="name" formControlName="name" class="form-control form-control-lg" type="text" name="name" placeholder="Enter Name" />
+                                        <div class="text-danger mt-1" *ngIf="getControl('name')?.invalid && getControl('name')?.touched">
+                                            Enter valid name (Minimum 4 Characters)
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Position</label>
+                                        <input formControlName="position" class="form-control form-control-lg" type="text" name="position" placeholder="Enter Postion" />
+                                        <div class="text-danger mt-1" *ngIf="getControl('position')?.invalid && getControl('position')?.touched">
+                                            Position is required
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Address</label>
+                                        <textarea formControlName="address" class="form-control form-control-lg" type="address" name="text" placeholder="Enter Address"></textarea>
+                                        <div class="text-danger mt-1" *ngIf="getControl('address')?.invalid && getControl('address')?.touched">
+                                            Address is required
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-2 mt-3">
+                                        <button [disabled]="userDetails.invalid" type="submit" class="btn btn-lg btn-primary">Add User</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

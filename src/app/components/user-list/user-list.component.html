@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+    <div class="col-12">
+        <div class="card shadow-lg border border-secondary" style="background-color: #f5f7fa;">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-borderless mb-0">
+                        <thead>
+                            <tr>
+                                <!-- <th scope="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckDefault" />
+                                    </div>
+                                </th> -->
+                                <th scope="col">USER</th>
+                                <th scope="col">POSITION</th>
+                                <th scope="col">ADDRESS</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let user of users2">
+                                <!-- <th scope="row">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckDefault1" checked />
+                                    </div>
+                                </th> -->
+                                <td>{{user.name}}</td>
+                                <td>{{user.position}}</td>
+                                <td>{{user.address}}</td>
+                                <td><button class="btn btn-info" [routerLink]="['../edit-user', user.id]">Edit</button></td>
+                                <td>
+                                    <button (click)="deleteUser(user.id)" type="button" class="btn btn-danger btn-sm px-3">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
