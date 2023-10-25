@@ -29,20 +29,14 @@ export class AppComponent implements OnInit {
       position: 'Technology Intern',
       address: 'Bhubaneswar'
     },
-    // {
-    //   id: 3,
-    //   name: 'Aisha Jain',
-    //   position: 'Technology Intern',
-    //   address: 'Dehradun'
-    // },
     {
-      id: 4,
+      id: 3,
       name: 'Vanshita Rohela',
       position: 'Technology Intern',
       address: 'Mathura'
     },
     {
-      id: 5,
+      id: 4,
       name: 'Milind Jha',
       position: 'Technology Intern',
       address: 'Patna'
